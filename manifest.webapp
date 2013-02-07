@@ -1,0 +1,17 @@
+{
+    "name": "Travel Saver",
+    "version": "1.0",
+    "description": "Firefox OS day app",
+    "launch_path": "/index.html",
+    "icons": {
+        "128": "/images/Compass-icon.png"
+    },
+    "installs_allowed_from": [
+        "*"
+    ],
+    "developer": {
+        "name": "MP&MM&BD",
+        "url": "https://github.com/TravelSaver/App"
+    },
+    "default_locale": "en"
+}

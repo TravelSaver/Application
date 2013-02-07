@@ -1,0 +1,118 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="author" content="">
+    <meta name="rating" content="general">
+    <meta name="robots" content="index, follow">
+    <meta name="Description" content="">
+    <meta name="Keywords" content="">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Travel Saver</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/money.min.js"></script>
+</head>
+<body>
+    <div id="screensCropper">
+        <div id="screenContainer">
+            <div id="homeScreen" class="screen" data-leftscroll="0">
+                <figure id="logo">
+                    <img src="images/logo.png" width="258" height="169" alt="">
+                </figure>
+                <p id="fromForm">
+                    <span class="pseudoLabel">from</span> <span id="from"></span><a href="#from" class="loupe">
+                        <img src="images/loupe.png" width="25" height="23">
+                    </a>
+                </p>
+                <div id="toForm">
+                    <label for="locationTo">to</label><input type="text" id="locationTo" placeholder="--Enter localization">
+                </div>
+                <a href="#optionsScreen" class="scrollBtn redBtn" id="searchBtn">search</a>
+            </div>
+            <section id="optionsScreen" class="screen" data-leftscroll="-320px">
+                <a href="#homeScreen" class="scrollBtn">back</a>
+                <h1>What to <strong>compare:</strong></h1>
+                <ul id="options">
+                    <li><a href="#results" data-content="fuel" class="scrollBtn fuel">Fuel</a></li>
+                    <li><a href="#results" data-content="hotel" class="scrollBtn hotel">Hotel</a></li>
+                    <li><a href="#results" data-content="food" class="scrollBtn food">Food</a></li>
+                    <li>
+                        <div class="compareData">
+                            <label class="timeLabel">time:</label>
+                            <input type="text" class="time">
+                        </div>
+                        <div class="compareData">
+                            <label class="distanceLabel">distance:</label>
+                            <input type="text" class="distance">
+                        </div>
+                        <a href="#results" data-content="compare" class="scrollBtn costCompare">Compare</a>
+                    </li>
+                </ul>
+            </section>
+            <section id="results" class="screen" data-leftscroll="-640px">
+                <div id="fuel">
+                    <a href="#optionsScreen" class="scrollBtn">back</a>
+                    <h2>Fuel Prices</h2>
+                    <dl class="chooser">
+                        <dt>Chose car type:</dt>
+                        <dd id="compactCar" class="selected">compact</dd>
+                        <dd id="conventionalCar">conventional</dd>
+                        <dd id="highConsumptionCar">high consumption</dd>
+                    </dl>
+                    <ul class="result">
+                        <li>Polish zloty <strong class="liter" id="literPln">5.55</strong><strong id="carPln" class="fullCost"></strong></li>
+                        <li>Euro <strong class="liter" id="literEur">1.55</strong><strong id="carEur" class="fullCost"></strong></li>
+                        <li>Dollar <strong class="liter" id="literUsd">1.8</strong><strong id="carUsd" class="fullCost"></strong></li>
+                        <li>British pound <strong class="liter" id="literGbp">1.34</strong><strong id="carGbp" class="fullCost"></strong></li>
+                    </ul>
+                </div>
+                <div id="hotel">
+                    <a href="#optionsScreen" class="scrollBtn">back</a>
+                    <h2>Hotel <small>&gt; <span class="destination">Warsaw</span></small></h2>
+                    <div class="formRow">
+                        <label for="hotelFrom">From</label><input type="date" id="hotelFrom">
+                    </div>
+                    <div class="formRow">
+                        <label for="hotelTo">To</label><input type="date" id="hotelTo">
+                    </div>
+                    <ul class="result" id="hotelsList">
+<!--                        <li>Hotel1 <strong class="result"></strong></li>
+                        <li>Hotel2 <strong class="result"></strong></li>-->
+                    </ul>
+                </div>
+                <div id="food">
+                    <a href="#optionsScreen" class="scrollBtn">back</a>
+                    <h2>Food <small>&gt; <span class="destination">Warsaw</span></small>
+                        <img src="images/yelp.png" width="42" height="42" class="yelplogo"></h2>
+                    <ul class="result" id="restaurantsList">
+<!--                        <li>Restaurant1 <strong class="result"></strong></li>
+                        <li>Restaurant2 <strong class="result"></strong></li>-->
+                    </ul>
+                </div>
+                <div id="compare">
+                    <a href="#optionsScreen" class="scrollBtn">back</a>
+                    <h2>Currency Converter</h2>
+                    <dl class="chooser" id="calculatorOptions">
+                        <dt>Amount:
+                        <input id="amount" type="number" placeholder="ex.: 100"  /></dt>
+                        <dd>EUR</dd>
+                        <dd>USD</dd>
+                        <dd class="selected">PLN</dd>
+                        <dd>GBP</dd>
+                    </dl>
+                    <ul class="result">
+                        <li>Polish zloty <strong class="result" id="calculatorPLN"></strong></li>
+                        <li>Euro <strong class="result" id="calculatorEUR"></strong></li>
+                        <li>Dollar <strong class="result" id="calculatorUSD"></strong></li>
+                        <li>British pound <strong class="result" id="calculatorGBP"></strong></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

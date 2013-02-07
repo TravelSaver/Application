@@ -1,0 +1,31 @@
+#optionsScreen > .scrollBtn, #results > div > a{ position:absolute; top:423px; font-size:18px; font-family: 'KlavikaBold'; line-height:30px; padding-left:25px; text-decoration:none; color:#000; text-transform:uppercase; padding-right:5px;background: url(../images/back.png) no-repeat scroll 5px center}
+/* option */ 
+#optionsScreen h1 {font-size: 24px; font-style: italic; line-height: 28px; padding-top: 90px; position: absolute; text-align: right;  width: 135px;}
+#optionsScreen h1 strong {font-family: 'KlavikaBold'; font-size:30px}
+#optionsScreen #options { width:304px; margin-left:-6px; margin-top:6px}
+#optionsScreen #options li:first-child { margin-left:152px}
+#optionsScreen #options li a {background: url(../images/i1.png) no-repeat scroll center 35px #477BC0;  color: #FFFFFF;  display: block; float: left;  font-family: 'KlavikaBold';  font-size: 20px;  height: 144px; line-height: 240px; margin: 4px; text-align: center;  text-decoration: none;  text-transform: uppercase;  width: 144px;}
+#optionsScreen #options li + li a{ width:144px; height:144px; background:url(../images/i2.png) no-repeat scroll center 35px #30e54d;}
+#optionsScreen #options li + li + li  a{ width:144px; height:144px; background:url(../images/i3.png) no-repeat scroll center 35px #b32e2e;}
+#optionsScreen #options li + li + li + li {}
+#optionsScreen #options li + li + li + li > div { background:#fff; width:204px; height:42px; line-height:42px; font-size:14px; float:left; clear:both; margin-bottom:4px;}
+#optionsScreen #options li + li + li + li > div label { display: inline-block; text-align: right;  width: 80px;t}
+#optionsScreen #options li + li + li + li > div input { display: inline-block; height: 42px; line-height: 42px;  width: 85px;font-family: 'KlavikaBold';}
+.compareData {background: url(../images/i+time.png) no-repeat scroll center 5px #fff !important; margin-top:4px  }
+.compareData+ .compareData {background: url(../images/i+dist.png) no-repeat scroll center 5px #fff !important; }
+#optionsScreen #options li + li + li + li > a {background: url("../images/i4.png") no-repeat scroll center 10px #674699;  font-size: 15px;  height: 92px;  line-height: 152px;  position: relative;  top: -50px;  width: 92px;}
+
+#results {}
+#results > div { margin-top:14px;}
+#results > div h2 { display:block; line-height:82px; height:82px; font-size:24px;background: url(../images/i1.png) no-repeat scroll 25px center #477BC0; text-indent:100px; font-family: 'KlavikaBold'; color:#fff;  }
+#results > div.fuel h2 { display:block; line-height:82px; height:82px; font-size:24px;background: url(../images/i1.png) no-repeat scroll 25px center #477BC0; text-indent:100px; font-family: 'KlavikaBold'; color:#fff;  }
+#results > div.compare h2 { display:block; line-height:82px; height:82px; font-size:24px;background: url(../images/i4.png) no-repeat scroll 25px center #674699; text-indent:100px; font-family: 'KlavikaBold'; color:#fff;  }
+dl { background: none repeat scroll 0 0 #FFFFFF;  height: 80px;}
+dt { height:40px; line-height:40px; text-indent:15px; font-size:16px; background:#f2f2f2; display:block;}
+dl li {display: block; float: left; font-size: 11px;  height: 40px;  line-height: 40px;  padding: 0 12px;  text-transform: uppercase;}
+.result { margin-top:10px;}
+.result li { margin-bottom:10px; line-height:40px; height:40px; text-indent:15px; display:block; clear:both;; background:#fff; font-size:16px; position:relative}
+.fullCost, .liter , .result .result { color:#fff; text-align:center; text-indent:0}
+.fullCost {line-height:40px; height:40px; display:block; background:#477bc0; text-align:center;  font-family: 'KlavikaBold'; position:absolute; right:0; width:80px; top:0 }
+.liter {line-height:40px; height:40px; display:block; background:#000;; text-align:center;  font-family: 'KlavikaBold'; position:absolute; right:80px; width:80px; top:0}
+.result .result{line-height:40px; height:40px; display:block; background:#674699;; text-align:center;  font-family: 'KlavikaBold'; position:absolute; right:0px; width:80px; top:0; margin-top:0}
