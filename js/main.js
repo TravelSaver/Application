@@ -128,20 +128,6 @@ function showPosition(position) {
 }
 
 function showError(error) {
-    switch (error.code) {
-        case error.PERMISSION_DENIED:
-            console.log("User denied the request for Geolocation.");
-            break;
-        case error.POSITION_UNAVAILABLE:
-            console.log("Location information is unavailable.");
-            break;
-        case error.TIMEOUT:
-            console.log("The request to get user location timed out.");
-            break;
-        case error.UNKNOWN_ERROR:
-            console.log("An unknown error occurred.");
-            break;
-    }
     $('#from').text('Barcelona');
 }
 
@@ -194,7 +180,7 @@ function getHotels()
     $('#hotelsList').empty();
     $.getJSON('http://travelsaver.azurewebsites.net/api/hotels/get/?fromDate=' + fromDate + '&toDate='+toDate+'&city=' + $('#locationTo').val() + '&currency=EUR', function (data) {
         $.each(data, function (i, hotel) {
-            $('#hotelsList').append('<li title="Description: ' + (hotel.shortDescription == null ? 'Not provided!' : hotel.shortDescription) + '... Address: ' + hotel.address1 + '"><a target="_blank" href="http://travel.ian.com/hotel/propertydetails/' + hotel.hotelId + '/SUMMARY">' + hotel.name + ' ' + hotel.hotelRating + '*' + ' </a><strong class="result" title="Tripadvisor rating">' + hotel.tripAdvisorRating + '</strong></li>');
+            $('#hotelsList').append('<li title="Description: ' + (hotel.shortDescription == null ? 'Not provided!' : hotel.shortDescription) + '... Address: ' + hotel.address1 + '"><a target="_blank" href="http://travel.ian.com/hotel/propertydetails/' + hotel.hotelId + '/SUMMARY?isHRN=true&cid=55505">' + hotel.name + ' ' + hotel.hotelRating + '*' + ' </a><strong class="result" title="Tripadvisor rating">' + hotel.tripAdvisorRating + '</strong></li>');
         });
     });
 }
